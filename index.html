@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Project for Colin</title>
+        <title>The Biscuit Tin</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-            <div class="container-fluid">
-                <h1>Biscuit Tin</h1>
-                    <section>
-                        <div class="mt-2 row">
-                            <div class="col-7">
-                                <input class="form-control todo-input" type="text" name="todo-input" placeholder="Describe the biscuit!">
-                            </div>
-                            <div class="col-1">
-                                <label for="action">Action:</label>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <button class="btn btn-primary" id="add-tin">ADD TO TIN</button>
-                            <button class="btn btn-primary" id="prep-dough">PREPARE THE DOUGH</button>
-                        </div>
-                    </section>
-                <div class="mt-2">
-                    <ol class="biscuit-tin-list"></ol>
+    <div class="container-fluid">
+        <h1>Biscuit Tin</h1>
+        <section>
+            <div class="mt-2 row">
+                <div class="col-7">
+                    <input
+                        id="biscuit_input"
+                        class="form-control todo-input"
+                        type="text"
+                        name="todo-input"
+                        placeholder="Describe the biscuit!"
+                    />
                 </div>
-                <div class="mt-2">
-                        <ol class="prep-dough-list"></ol>
+
+                <div class="col-1">
+                <label for="action">Action:</label>
                 </div>
             </div>
-        <script src="./main.js"></script>
+
+            <div class="mt-2">
+                <button class="btn btn-primary" id="add-tin">ADD TO TIN</button>
+                <button class="btn btn-primary" id="prep-dough">PREPARE THE DOUGH</button>
+            </div>
+        </section>
+        
+        <div class="mt-2">
+            <ol class="biscuit-tin-list" id="tin"></ol>
+        </div>
+        
+        <div class="mt-2">
+            <ol class="prep-dough-list" id="dough"></ol>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
     </body>
 </html>
