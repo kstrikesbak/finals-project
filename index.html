@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>The Biscuit Tin</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./style.css" rel="stylesheet" type="text/css">
+        <title>The Biscuit Tin</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
     <body>
-    <div class="container-fluid">
+    <div class="app">
+        <div id="nav">
+            <ul style="list-style-type:none">
+                <li id="home" class="navbar"><a href="./index.html">Home</a></li>
+                <li id="about" class="navbar"><a href="./index-1.html">About</a></li>
+            </ul>
+        </div>
         <h1>Biscuit Tin</h1>
         <section>
-            <div class="mt-2 row">
+            <div class="mt-6 row">
                 <div class="col-7">
                     <input
                         id="biscuit_input"
@@ -40,6 +48,13 @@
             <ol class="prep-dough-list" id="dough"></ol>
         </div>
     </div>
+
+    <div id="footer"><footer><br><p id="p-foot">
+        <strong>THE BISCUIT TIN</strong> is a simple yet effective tool to get your arse in gear.
+        <br> A <strong>BISCUIT</strong> is an accomplishment in your life (big or small) that you'd be proud to add to the <strong>BISCUIT TIN</strong>.
+        <br> Feel free to populate the <strong>TIN</strong> with your very own biscuits!
+        <br> Also feel free to <strong>PREPARE THE DOUGH</strong> with your current or future biscuits that you are working on. Think of this as your very own <strong>Biscuit Factory!</strong>
+        <br> Please see my <a href="https://github.com/kstrikesbak/">GITHUB</a> for more details!</p><br></footer></div>
 
     <script src="/main.js"></script>
     </body>
