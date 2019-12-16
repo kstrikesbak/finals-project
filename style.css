@@ -1,4 +1,4 @@
-body { 
+body {
     font-size: 20px;
     font-family: sans-serif;
     line-height: 1.5em;
@@ -9,6 +9,8 @@ body {
     "tin factory"
     "footie footie";
 }
+
+
 header { 
     grid-area: navbar; 
 }

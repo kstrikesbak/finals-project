@@ -1,5 +1,18 @@
-const tin = [];
-const doughList = [];
+
+// sorry for using var, local storage didn't work with const
+var tin = [];
+var doughList = [];
+
+if (localStorage){
+    const storage = localStorage.getItem("biscuit");
+    if (storage){
+        let biscuit = JSON.parse(storage); //get string from storage and convert into JS object and arrays
+        tin = biscuit.tin;
+        doughList = biscuit.doughList;
+        displayTin();
+        displayDough();
+    }
+}
 
 document.querySelector('#add-tin').addEventListener('click', function () {
     const biscuit_inp = document.querySelector('#biscuit_input');
@@ -39,19 +52,27 @@ function displayTin(){
         editButton.innerHTML = "&#x270f;";
         editButton.setAttribute("data-index", i);
         xButton.innerHTML = "&times;";
-        xButton.setAttribute("data-index", i);
+        xButton.setAttribute("data-index", i); //custom HTML attribute holding index in tin array
         li.appendChild(editButton);
         li.appendChild(xButton);
         document.querySelector('#tin ul').appendChild(li);
     }
 
+    //all the edit buttons
     document.querySelectorAll("#tin ul button:first-child").forEach(function(button){
         button.addEventListener("click", editInTin);
     });
 
+    //all the delete buttons
     document.querySelectorAll("#tin ul button:last-child").forEach(function(button){
         button.addEventListener("click", removeFromTin);
     });
+
+    //update localStorage
+    if (localStorage){
+        let biscuitString = JSON.stringify({tin, doughList}); //create object, then convert to a string
+        localStorage.setItem("biscuit", biscuitString);
+    }
     
 }
 
@@ -79,9 +100,16 @@ function displayDough(){
     document.querySelectorAll("#factory ul button:last-child").forEach(function(button){
         button.addEventListener("click", removeFromDough);
     });
+
+    //update localStorage
+    if (localStorage){
+        let biscuitString = JSON.stringify({tin, doughList}); //create object, then convert to a string
+        localStorage.setItem("biscuit", biscuitString);
+    }
 }
 
 function editInTin(event){
+    //event.target.getAttribute("data-index") is the index attribute for that button.
     let index = Number(event.target.getAttribute("data-index"));
     let text = tin[index];
     let input = document.querySelector("#biscuit_input");
