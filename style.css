@@ -1,27 +1,58 @@
-/* * {
-    margin: 0;
-    padding: 0;
-} */
-
-#app {
-    display: grid;
-    font-size: 8em;
+body { 
+    font-size: 20px;
+    font-family: sans-serif;
+    line-height: 1.5em;
     text-align: center;
-    height: 100vh;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(4,1fr);
+    display: grid;
     grid-template-areas:
     "navbar navbar"
-    "navbar navbar"
-    "footie footie"
-    "footie footie"
-    ;
+    "tin factory"
+    "footie footie";
+}
+header { 
+    grid-area: navbar; 
 }
 
-#navbar {
-    grid-area: navbar;
+nav a { 
+    display: inline-block; 
+}
+#tin { 
+    grid-area: tin; 
+    min-height: 50px;
 }
 
-#footer {
-    grid-area: footie;
+#factory { 
+    grid-area: factory; 
+    min-height: 50px; 
+}
+
+footer { 
+    grid-area: footie; 
+}
+
+ul { 
+    list-style-type: none; 
+    padding: 0; 
+}
+
+input { 
+    padding: 6px 12px; 
+    border-radius: 5px; 
+}
+
+button { 
+    padding: 6px 12px; 
+    background: linear-gradient(cyan, navy); 
+    color: white; 
+    border-radius: 5px; 
+}
+
+@media screen and (max-width: 500px){
+    body {
+        grid-template-areas:
+        "navbar"
+        "tin"
+        "factory"
+        "footie";
+    }
 }
