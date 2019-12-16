@@ -60,7 +60,7 @@ function displayDough(){
 
     for (let i = 0; i < doughList.length; i++) {
         let li = document.createElement('li');
-        li.innerText = tin[i];
+        li.innerText = doughList[i];
         let editButton = document.createElement("button");
         let xButton = document.createElement("button");
         editButton.innerHTML = "&#x270f;";
@@ -69,7 +69,7 @@ function displayDough(){
         xButton.setAttribute("data-index", i);
         li.appendChild(editButton);
         li.appendChild(xButton);
-        document.querySelector('#tin ul').appendChild(li);
+        document.querySelector('#factory ul').appendChild(li);
     }
     
     document.querySelectorAll("#factory ul button:first-child").forEach(function(button){
@@ -81,14 +81,32 @@ function displayDough(){
     });
 }
 
-function editInTin(){
+function editInTin(event){
+    let index = Number(event.target.getAttribute("data-index"));
+    let text = tin[index];
+    let input = document.querySelector("#biscuit_input");
+    input.value = text;
+    input.focus();
+    removeFromTin(event);
 }
 
-function removeFromTin(){
+function removeFromTin(event){
+    let index = Number(event.target.getAttribute("data-index"));
+    tin.splice(index, 1);
+    displayTin();
 }
 
-function editInDough(){
+function editInDough(event){
+    let index = Number(event.target.getAttribute("data-index"));
+    let text = doughList[index];
+    let input = document.querySelector("#biscuit_input");
+    input.value = text;
+    input.focus();
+    removeFromDough(event);
 }
 
-function removeFromDough(){
+function removeFromDough(event){
+    let index = Number(event.target.getAttribute("data-index"));
+    doughList.splice(index, 1);
+    displayDough();
 }
