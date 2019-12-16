@@ -1,6 +1,9 @@
 # THE BISCUIT TIN
 
-How often do we forget about all the shit we've been through? Shit is always there to be accomplished. 
+How often do we forget about all the shit we've been through? Shit is always there to be accomplished. If you feel accomplished after accomplishing it, it should never be forgotten! 
+
+![img](./assets/biscuit-tin.png)
+
 
 THE BISCUIT TIN is a simple yet effective tool to get your arse in gear.
 A BISCUIT is an accomplishment in your life (big or small) that you'd be proud to add to the BISCUIT TIN. Feel free to populate the TIN with your very own biscuits! Also feel free to PREPARE THE DOUGH with your current or future ''biscuits'' that you are working on. Think of this as your very own BISCUIT FACTORY! 
@@ -19,6 +22,8 @@ In that cookie jar, I pull out whatever I need for the task at hand."
 
 ## Features:
 
+* can edit achievements/goals on lists
+* can remove achievements/goals on lists
 * lists your past achievements
 * lists your potential future achievements
 * acknowledges your past achievements as a stepping stone to future greatness
